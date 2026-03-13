@@ -1,0 +1,6 @@
+flask
+flask-cors
+portkey-ai
+chromadb
+PyPDF2
+python-docx
