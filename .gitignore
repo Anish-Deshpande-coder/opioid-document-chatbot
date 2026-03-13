@@ -31,3 +31,5 @@ Thumbs.db
 # IDEs
 .vscode/
 .idea/
+
+chroma_db_pdfs/
