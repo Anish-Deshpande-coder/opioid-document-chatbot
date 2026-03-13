@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+
+# Databases (too large for GitHub)
+chroma_db/
+chroma_db_pdfs/
+
+# PDFs (too large)
+2ndAmend_5/
+*.pdf
+
+# Node modules
+node_modules/
+chatbot-frontend/node_modules/
+chatbot-frontend/dist/
+
+# Environment variables
+.env
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
