@@ -9,7 +9,7 @@ venv/
 
 # Databases (too large for GitHub)
 chroma_db/
-chroma_db_pdfs/
+
 
 # PDFs (too large)
 2ndAmend_5/
