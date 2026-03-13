@@ -1,4 +1,4 @@
-import Chatbot from './Chatbot'
+import Chatbot from './chatbot.tsx'
 
 function App() {
   return <Chatbot />
