@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
-import './Chatbot.css';
+import './chatbot.css';
 
 interface SearchResult {
   rank: number;
