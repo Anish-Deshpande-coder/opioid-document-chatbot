@@ -55,7 +55,7 @@ function Chatbot() {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/search', {
+      const response = await axios.post('https://opioid-document-chatbot.onrender.com/search', {
         question: actualQuestion,
         n_results: nResults
       });
