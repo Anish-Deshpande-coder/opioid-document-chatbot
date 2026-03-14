@@ -1,25 +1,20 @@
 ﻿from flask import Flask, request, jsonify
 from flask_cors import CORS
-from portkey_ai import Portkey
 import chromadb
 import os
+import google.generativeai as genai
 
 app = Flask(__name__)
 CORS(app)
 
-# Initialize Portkey
-portkey = Portkey(
-    base_url="https://ai-gateway.apps.cloud.rt.nyu.edu/v1",
-    api_key=os.environ.get("PORTKEY_API_KEY"),
-    virtual_key="vertexai"
-)
+genai.configure(api_key=os.environ.get("GOOGLE_API_KEY"))
 
 def create_embedding(text):
-    response = portkey.embeddings.create(
-        model="gemini-embedding-001",
-        input=text
+    result = genai.embed_content(
+        model="models/gemini-embedding-001",
+        content=text
     )
-    return response.data[0].embedding
+    return result['embedding']
 
 def search_documents(question, n_results=5):
     client = chromadb.PersistentClient(path="./chroma_db_pdfs")
